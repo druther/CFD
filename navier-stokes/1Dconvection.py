@@ -1,10 +1,10 @@
 # My implementation for solving the navier stokes equations using Python
 
 import numpy
-import mathplotlib.pyplot
+import matplotlib.pyplot as plt
 import time, sys
 
-print 'Hello'
+#print 'Hello'
 
 #%matplotlib inline # for avoiding a new window
 
@@ -14,6 +14,9 @@ numt = 25
 deltat = 0.25
 c = 1 # wavenumber
 
-u = numpy.ones(nx)
+u = numpy.ones(numx)
 u[.5/distx : 1/distx +1]=2
 print u
+
+plt.plot(numpy.linspace(0,2,numx),u)
+plt.savefig('myfig')
